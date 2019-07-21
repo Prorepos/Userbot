@@ -13,7 +13,7 @@ from telethon.tl.types import User
 from sqlalchemy.exc import IntegrityError
 
 from userbot import (COUNT_PM, CMD_HELP, BOTLOG, BOTLOG_CHATID,
-                     PM_AUTO_BAN, BRAIN_CHECKER, LASTMSG, LOGS)
+                     PM_AUTO_BAN, LASTMSG, LOGS)
 from userbot.events import register
 
 # ========================= CONSTANTS ============================
@@ -29,8 +29,6 @@ async def permitpm(event):
     """ Prohibits people from PMing you without approval. \
         Will block retarded nibbas automatically. """
     if PM_AUTO_BAN:
-        if event.sender_id in BRAIN_CHECKER:
-            return
         if event.is_private and not (await event.get_sender()).bot:
             try:
                 from userbot.modules.sql_helper.pm_permit_sql import is_approved
@@ -149,9 +147,9 @@ async def notifon(non_event):
         await non_event.edit("`Notifications from unapproved PM's unmuted!`")
 
 
-@register(outgoing=True, pattern="^.approve$")
+@register(outgoing=True, pattern="^.pm$")
 async def approvepm(apprvpm):
-    """ For .approve command, give someone the permissions to PM you. """
+    """ For .pm command, give someone the permissions to PM you. """
     if not apprvpm.text[0].isalpha() and apprvpm.text[0] not in ("/", "#", "@", "!"):
         try:
             from userbot.modules.sql_helper.pm_permit_sql import approve
@@ -278,7 +276,7 @@ async def unblockpm(unblock):
 
 CMD_HELP.update({
     "pmpermit": "\
-.approve\
+.pm\
 \nUsage: Approves the mentioned/replied person to PM.\
 \n\n.disapprove\
 \nUsage: Disapprove anyone in PM..\

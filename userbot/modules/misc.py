@@ -15,6 +15,11 @@ from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP
 from userbot.events import register
 
 
+@register(outgoing=True, pattern="^.fp$")
+async def facepalm(e):
+    if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
+        await e.edit("")
+
 @register(outgoing=True, pattern="^.random")
 async def randomise(items):
     """ For .random command, get a random item from the list of items. """
@@ -66,32 +71,20 @@ async def revivedabot(restart):
         # You probably don't need it but whatever
         quit()
 
-@register(outgoing=True, pattern="^.community$")
-async def bot_community(community):
-    """ For .support command, just returns the group link. """
-    if not community.text[0].isalpha() and community.text[0] not in ("/", "#", "@", "!"):
-        await community.edit("Join the awesome Paperplane userbot community: @userbot_support\nBe warned that this is a fork of their project and you may get limited support for bugs.")
-        
-@register(outgoing=True, pattern="^.support$")
-async def bot_support(wannahelp):
-    """ For .support command, just returns the group link. """
-    if not wannahelp.text[0].isalpha() and wannahelp.text[0] not in ("/", "#", "@", "!"):
-        await wannahelp.edit("Join the Paperplane Extended Channel: @PaperplaneExtended")
-        
 @register(outgoing=True, pattern="^.creator$")
 async def creator(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("[AvinashReddy3108](https://t.me/AvinashReddy3108)")
+        await e.edit("[noobvishal](https://t.me/noobvishal)")
 
 @register(outgoing=True, pattern="^.readme$")
 async def reedme(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("You might want to have a look at the [README.md](https://github.com/AvinashReddy3108/PaperplaneExtended/blob/master/README.md) file.")
+        await e.edit("You might want to have a look at the [README.md](https://github.com/noobvishal/Userbot/blob/master/README.md) file.")
 
 #
 # Copyright (c) Gegham Zakaryan | 2019
 #
-@register(outgoing=True, pattern="^.repeat (.*) (.*)")
+@register(outgoing=True, pattern="^.repeatline (.*) (.*)")
 async def repeat(rep):
     if not rep.text[0].isalpha() and rep.text[0] not in ("/", "#", "@", "!"):
         replyCount = int(rep.pattern_match.group(1))
@@ -104,11 +97,38 @@ async def repeat(rep):
 
         await rep.edit(replyText)
 
+@register(outgoing=True, pattern="^.repeat")
+async def repeats(e):
+    message = e.text[10:]
+    count = int(e.text[8:10])
+    repmessage = message * count
+    await wait([e.respond(repmessage)for i in range(count)])
+    await e.delete()
+
 @register(outgoing=True, pattern="^.repo$")
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     if not wannasee.text[0].isalpha() and wannasee.text[0] not in ("/", "#", "@", "!"):
-        await wannasee.edit("Click [here](https://github.com/AvinashReddy3108/PaperplaneExtended) to open Paperplane Extended's GitHub page.")
+        await wannasee.edit("Click [here](https://github.com/noobvishal/Userbot) to open this Userbot Repo's GitHub page.")
+
+@register(outgoing=True, pattern="^.gangsta$")
+async def whoizme(e):
+    if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
+        await e.edit("EVERyBOdy")
+        await asyncio.sleep(0.3)
+        await e.edit("iZ")
+        await asyncio.sleep(0.2)
+        await e.edit("GangSTur")
+        await asyncio.sleep(0.5)
+        await e.edit("UNtIL ")
+        await asyncio.sleep(0.2)
+        await e.edit("I")
+        await asyncio.sleep(0.3)
+        await e.edit("ArRivE")
+        await asyncio.sleep(0.3)
+        await e.edit("🔥")
+        await asyncio.sleep(0.3)
+        await e.edit("EVERyBOdy iZ GangSTur UNtIL I ArRivE 🔥")
 
 CMD_HELP.update({
     'random': '.random <item1> <item2> ... <itemN>\
@@ -124,14 +144,6 @@ CMD_HELP.update({
 hear Windows XP shutdown sound... but you don't."
 })
 CMD_HELP.update({
-    'support': ".support\
-\nUsage: If you need help, use this command."
-})
-CMD_HELP.update({
-    'community': ".community\
-\nUsage: Join the awesome Paperplane userbot community !!"
-})
-CMD_HELP.update({
     'repo': '.repo\
 \nUsage: If you are curious what makes the userbot work, this is what you need.'
 })
@@ -139,11 +151,20 @@ CMD_HELP.update({
     "readme": "Read nibba READ !!"
 })
 CMD_HELP.update({
-    "creator": "Know who created this awesome userbot !!"
+    "creator": "Know who created this awesome userbot fork !!"
 })
 CMD_HELP.update({
-    "repeat": ".repeat <no.> <text>\nRepeats a text number of times."
+    "repeatline": ".repeatline <no.> <text>\nRepeats a text number of times. in different lines"
+})
+CMD_HELP.update({
+    "repeat": ".repeat <no.> <text>\nRepeats a text number of times. in the same line"
 })
 CMD_HELP.update({
     "restart": "Restart the bot !!"
+})
+CMD_HELP.update({
+    "gangsta": "Show them who's the gansta"
+})
+CMD_HELP.update({
+    "fp": "Send face palm emoji."
 })

@@ -1,42 +1,42 @@
-# Project Paperplane Extended
+# UserBot
 
-### **A modular Telegram userbot running on Python 3.6+ with an sqlalchemy database.**
+### Installing
 
-#### The easiest way to deploy this bad boy !!
+ #### # The Easiest Way
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/AvinashReddy3108/PaperplaneExtended/tree/sql-extended)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/noobvishal/Userbot/tree/sql-extended)
 
-    #include <std/disclaimer.h>
-    /**
-        Your Telegram account may get banned.
+### Sudo Access Has Been Removed In This Fork ;)
 
-        I am not responsible for ANY improper use of this bot.
 
-        This userbot is intended for the purpose of having fun with memes,
-        as well as efficiently managing groups.
+```diff
+#Disclaimer
 
-        You ended up spamming groups, getting reported left and right,
-        and you ended up in a Finale Battle with Telegram and at the end
-        Telegram Team deleted your account?
+   - Your Telegram account may get banned.
+   - I am not responsible for any improper use of this bot
+   - This bot is intended for the purpose of having fun with memes,
+   - As well as efficiently managing groups.
+   - You ended up spamming groups, getting reported left and right,
+   - And you ended up in a Finale Battle with Telegram and at the end
+   - Telegram Team deleted your account?
+   - And after that, then you pointed your fingers at us
+   - For getting your acoount deleted?
+   - I will be rolling on the floor laughing at you.
+```
 
-        And after that, then you pointed your fingers at us
-        for getting your acoount deleted?
+A modular telegram Python UserBot running on python3.
 
-        I will be rolling on the floor laughing at you.
-    /**
+For configuring this userbot, you can checkout the [Wiki](https://wiki.raphielgang.org)
 
-This is a fork of the famous [Paperplane](https://github.com/RaphielGang/Telegram-UserBot) userbot made by the awesome [RaphielGang](https://github.com/RaphielGang) team with some extras from the Telegram userbot community.
+If you find any bugs or have any suggestions then don't hesitate to [contact me](https://t.me/noobvishal).
 
-For setting up and configuring this userbot, you can checkout the [Wiki](https://github.com/AvinashReddy3108/PaperplaneExtended/wiki) [WIP, Coming Soon !!]
-
-If you just want to stay in the loop about new features or
-announcements you can join the [news channel](https://t.me/PaperplaneExtended).
-
-If you find any bugs or have any suggestions then don’t hesitate to contact me in my [support group](https://t.me/joinchat/FL1HhlObW_Q5oUrZdbDcKg).
+Please head to the wiki on instructions to setting it up!
 
 ### Credits:
 
-I would like to thank people who assisted me throughout this project:
+This is a fork a Balajimastro's Telegram-Userbot.
+
+Thanks to the people who assisted Balajimastro throughout this project:
 
 * [@YouTwitFace](https://github.com/YouTwitFace)
 * [@TheDevXen](https://github.com/TheDevXen)
@@ -44,19 +44,9 @@ I would like to thank people who assisted me throughout this project:
 * [@deletescape](https://github.com/deletescape)
 * [@songotenks69](https://github.com/songotenks69)
 * [@Ovenoboyo](https://github.com/Ovenoboyo)
-* [@SphericalKat](https://github.com/ATechnoHazard)
-* [@nitanmarcell](https://www.github.com/nitanmarcel)
-* [@spechide](https://www.github.com/spechide)
-* [@Jeepeo](https://github.com/Jeepeo)
-* [@shxnpie](https://github.com/shxnpie)
-* [@rupansh](https://github.com/rupansh)
-* [@zakaryan2004](https://github.com/zakaryan2004)
-* [@kandnub](https://github.com/kandnub)
-* [@pqhaz](https://github.com/pqhaz)
+* [SphericalKat](https://github.com/ATechnoHazard)
+* [nitamarcel](https://github.com/nitanmarcel)
 
-and many more people and projects who aren’t mentioned here.
+and many more people who aren't mentioned here.
 
-All features taken from them are copyrighted to their respespective, if you are handling the features/module
-by them you need to strictly comply their respective LICENSE
-
-Found Bugs? Create an issue on the issue tracker, or post it in the [support group](https://t.me/joinchat/FL1HhlObW_Q5oUrZdbDcKg).
+### Special Thanks To [YasiR Siddiqui](https://github.com/Yasir-siddiqui) And [AvinashReddy3108](https://github.com/AvinashReddy3108)
