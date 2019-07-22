@@ -252,7 +252,7 @@ FACEREACTS = [
 ]
 
 RUNSREACTS = [
-    "Runs to Yasir",
+    "Runs to RubyRox",
     "Runs far, far away from earth",
     "Running faster than usian bolt coz I'mma Bot",
     "I go away",
