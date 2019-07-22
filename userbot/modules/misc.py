@@ -22,7 +22,7 @@ from userbot.events import register
 @register(outgoing=True, pattern="^.fp$")
 async def facepalm(e):
     if not e.text[0].isalpha() and e.text[0] not in ("/", "#", "@", "!"):
-        await e.edit("")
+        await e.edit("🤦‍♂")
 
 @register(outgoing=True, pattern="^.random")
 async def randomise(items):
