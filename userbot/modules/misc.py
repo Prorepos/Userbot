@@ -7,6 +7,10 @@
 
 """ Userbot module for other small commands. """
 
+import asyncio
+import time
+from asyncio import wait
+
 from random import randint
 from time import sleep
 import os
